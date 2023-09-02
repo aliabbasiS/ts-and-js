@@ -1,21 +1,22 @@
 console.log('hello world');
+console.log(1)
 
 type contactlisttype = {
   id: string;
   name: string | null;
-  number: number;
-  storage: 'Sim' | 'device';
+  number: string;
+  storage: string ;
 };
 
 const contactnamelist: contactlisttype[] = [];
 
 const submitButton = document.querySelector("#submit");
 submitButton?.addEventListener("click", () => {
-  const id: contactlisttype["id"] =crypto.randomUUID(); // Replace generateUniqueId() with the appropriate function to generate a unique ID
-  const contactname: contactlisttype["name"] = document.querySelector('#contactname')?.value;
-  const contactnumber: contactlisttype["number"] = document.querySelector('#contactnumber')?.value;
-  const rememberCheckbox = document.querySelector('#remember');
-  const storage: contactlisttype["storage"] = rememberCheckbox?.checked ? 'device' : 'Sim';
+  const id: contactlisttype["id"] =crypto.randomUUID(); 
+  const contactname= document.querySelector<HTMLInputElement>('#contactname')!.value;
+  const contactnumber = document.querySelector<HTMLInputElement>('#contactnumber')!.value;
+  const storage = document.querySelector<HTMLInputElement>('input[name=radio]:checked')!.value
+
 
   const newContact: contactlisttype = {
     id: id,
