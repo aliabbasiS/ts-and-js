@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+button{
+    background-color: greenyellow;
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rebeccapurple;
+    width: 25rem;
+    font-size: large;
+    margin-top: 1rem;
+}
+input{
+    width: 10rem;
+    font-size: 3rem;
+    background: rgb(10, 142, 91);
+    color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0.6rem;
+}
+#result{
+    width: 40rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
